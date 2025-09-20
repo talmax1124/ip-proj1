@@ -1,0 +1,202 @@
+/* 
+   mySite.css - Carlos Diaz Plaza
+   Custom CSS for Personal, Class Schedule, and Create Account pages
+*/
+
+/* ========================================
+   PERSONAL WEB PAGE STYLES 
+   ======================================== */
+
+/* Personal Page - Section Headers with Unique Colors */
+.personal-page .about-me-header {
+    color: #dc2626; /* Red */
+}
+
+.personal-page .hobbies-header {
+    color: #059669; /* Green */
+}
+
+.personal-page .education-header {
+    color: #7c3aed; /* Purple */
+}
+
+/* Personal Page - Education List Formatting */
+.personal-page .education-list li {
+    margin: 8px 0;
+}
+
+/* College Degree - Bold */
+.personal-page .education-list .college-degree {
+    font-weight: bold;
+}
+
+/* High School Diploma - Italicized */
+.personal-page .education-list .high-school {
+    font-style: italic;
+}
+
+/* Certificate - Underlined */
+.personal-page .education-list .certificate {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   CLASS SCHEDULE PAGE STYLES 
+   ======================================== */
+
+/* Class Schedule - Table Cell Text Centering */
+.schedule-page .schedule-table td,
+.schedule-page .schedule-table th {
+    text-align: center;
+}
+
+/* Class Schedule - Header Row Color (Blue) */
+.schedule-page .schedule-table thead tr {
+    background-color: #3b82f6; /* Blue */
+    color: white;
+}
+
+/* Class Schedule - Striped Rows (every other data row) */
+.schedule-page .schedule-table tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* Light gray stripe */
+}
+
+.schedule-page .schedule-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Dark mode support for striped rows */
+.dark .schedule-page .schedule-table tbody tr:nth-child(even) {
+    background-color: #374151;
+}
+
+.dark .schedule-page .schedule-table tbody tr:nth-child(odd) {
+    background-color: #1f2937;
+}
+
+/* Class Schedule - Holiday Events List Numbering */
+.schedule-page .events-list {
+    list-style-type: decimal; /* Arabic numbers for primary level */
+}
+
+.schedule-page .events-list ol {
+    list-style-type: upper-alpha; /* Uppercase letters for secondary level */
+}
+
+/* ========================================
+   CREATE ACCOUNT PAGE STYLES 
+   ======================================== */
+
+/* Create Account - Custom Radio Buttons for Majors */
+.account-page .major-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.account-page .major-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #9ca3af; /* Grey for unselected */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.account-page .major-option input[type="radio"]:checked {
+    background-color: #22c55e; /* Green for selected */
+    border-color: #16a34a;
+}
+
+.account-page .major-option input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 4px auto;
+}
+
+/* Create Account - Custom Checkboxes for Programming Languages */
+.account-page .language-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.account-page .language-option input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 8px;
+    background-color: #9ca3af; /* Grey for unselected */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.account-page .language-option input[type="checkbox"]:checked {
+    background-color: #3b82f6; /* Blue for selected */
+    border-color: #2563eb;
+}
+
+.account-page .language-option input[type="checkbox"]:checked::after {
+    content: '✓';
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+}
+
+/* Dark mode support for custom form elements */
+.dark .account-page .major-option input[type="radio"],
+.dark .account-page .language-option input[type="checkbox"] {
+    border-color: #6b7280;
+}
+
+.dark .account-page .major-option input[type="radio"]:not(:checked),
+.dark .account-page .language-option input[type="checkbox"]:not(:checked) {
+    background-color: #6b7280;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN 
+   ======================================== */
+
+@media (max-width: 768px) {
+    
+    /* Account Page - Adjust form element sizes on mobile */
+    .account-page .major-option input[type="radio"],
+    .account-page .language-option input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES 
+   ======================================== */
+
+@media print {
+    /* Hide dark mode toggle when printing */
+    #darkModeToggle {
+        display: none !important;
+    }
+    
+    /* Ensure proper colors for printing */
+    .schedule-page .schedule-table thead tr {
+        background-color: #e5e7eb !important;
+        color: black !important;
+    }
+    
+}

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="stylesheet" href="mySite.css" />
+  </head>
+  <body
+    class="account-page bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-300"
+  >
+    <div class="max-w-4xl mx-auto p-6">
+      <header class="text-center mb-8">
+        <div class="flex justify-end mb-4">
+          <button
+            id="darkModeToggle"
+            class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+          >
+            <span id="darkModeIcon">🌙</span>
+          </button>
+        </div>
+        <h1 class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
+          Create an Account
+        </h1>
+      </header>
+
+      <section class="mb-8">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+          <form
+            action="https://unfinishedbusiness.app/alert.php"
+            method="post"
+            class="space-y-6"
+          >
+            <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+              <h2
+                class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+              >
+                Personal Information
+              </h2>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label
+                    for="firstName"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="lastName"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label
+                    for="password"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="confirmPassword"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="birthDate"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >Birth Date</label
+                >
+                <input
+                  type="date"
+                  id="birthDate"
+                  name="birthDate"
+                  min="1970-01-01"
+                  max="2030-12-31"
+                  value="2000-10-21"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
+                />
+              </div>
+            </div>
+
+            <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+              <h2
+                class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+              >
+                Academic Information
+              </h2>
+
+              <div class="mb-6">
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3"
+                  >Major</label
+                >
+                <div class="space-y-2">
+                  <div class="major-option">
+                    <input
+                      type="radio"
+                      id="computerScience"
+                      name="major"
+                      value="Computer Science"
+                    />
+                    <label
+                      for="computerScience"
+                      class="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      <a
+                        href="https://www.unf.edu/ccec/computing/computer-science-program.html"
+                        target="_blank"
+                        class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >Computer Science</a
+                      >
+                    </label>
+                  </div>
+                  <div class="major-option">
+                    <input
+                      type="radio"
+                      id="dataScience"
+                      name="major"
+                      value="Data Science"
+                    />
+                    <label
+                      for="dataScience"
+                      class="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      <a
+                        href="https://www.unf.edu/ccec/computing/data-science-program.html"
+                        target="_blank"
+                        class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >Data Science</a
+                      >
+                    </label>
+                  </div>
+                  <div class="major-option">
+                    <input
+                      type="radio"
+                      id="fintech"
+                      name="major"
+                      value="FinTech"
+                    />
+                    <label
+                      for="fintech"
+                      class="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      <a
+                        href="https://www.unf.edu/ccec/computing/Financial-Technology-program.html"
+                        target="_blank"
+                        class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >FinTech</a
+                      >
+                    </label>
+                  </div>
+                  <div class="major-option">
+                    <input
+                      type="radio"
+                      id="informationScience"
+                      name="major"
+                      value="Information Science"
+                    />
+                    <label
+                      for="informationScience"
+                      class="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      <a
+                        href="https://www.unf.edu/ccec/computing/information-science-program.html"
+                        target="_blank"
+                        class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >Information Science</a
+                      >
+                    </label>
+                  </div>
+                  <div class="major-option">
+                    <input
+                      type="radio"
+                      id="informationSystems"
+                      name="major"
+                      value="Information Systems"
+                    />
+                    <label
+                      for="informationSystems"
+                      class="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      <a
+                        href="https://www.unf.edu/ccec/computing/information-systems-program.html"
+                        target="_blank"
+                        class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >Information Systems</a
+                      >
+                    </label>
+                  </div>
+                  <div class="major-option">
+                    <input
+                      type="radio"
+                      id="informationTechnology"
+                      name="major"
+                      value="Information Technology"
+                    />
+                    <label
+                      for="informationTechnology"
+                      class="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      <a
+                        href="https://www.unf.edu/ccec/computing/information-technology-program.html"
+                        target="_blank"
+                        class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >Information Technology</a
+                      >
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3"
+                  >Programming Language Experience</label
+                >
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="space-y-2">
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="c"
+                        name="programmingLanguages[]"
+                        value="C"
+                      />
+                      <label
+                        for="c"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/C_(programming_language)"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >C</a
+                        >
+                      </label>
+                    </div>
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="csharp"
+                        name="programmingLanguages[]"
+                        value="C#"
+                      />
+                      <label
+                        for="csharp"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >C#</a
+                        >
+                      </label>
+                    </div>
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="java"
+                        name="programmingLanguages[]"
+                        value="Java"
+                      />
+                      <label
+                        for="java"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/Java_(programming_language)"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >Java</a
+                        >
+                      </label>
+                    </div>
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="javascript"
+                        name="programmingLanguages[]"
+                        value="JavaScript"
+                      />
+                      <label
+                        for="javascript"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/JavaScript"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >JavaScript</a
+                        >
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="space-y-2">
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="php"
+                        name="programmingLanguages[]"
+                        value="PHP"
+                      />
+                      <label
+                        for="php"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/PHP"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >PHP</a
+                        >
+                      </label>
+                    </div>
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="python"
+                        name="programmingLanguages[]"
+                        value="Python"
+                      />
+                      <label
+                        for="python"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >Python</a
+                        >
+                      </label>
+                    </div>
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="visualbasic"
+                        name="programmingLanguages[]"
+                        value="Visual Basic"
+                      />
+                      <label
+                        for="visualbasic"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        <a
+                          href="https://en.wikipedia.org/wiki/Visual_Basic"
+                          target="_blank"
+                          class="text-blue-600 dark:text-blue-400 hover:underline"
+                          >Visual Basic</a
+                        >
+                      </label>
+                    </div>
+                    <div class="language-option">
+                      <input
+                        type="checkbox"
+                        id="other"
+                        name="programmingLanguages[]"
+                        value="Other"
+                      />
+                      <label
+                        for="other"
+                        class="text-sm text-gray-700 dark:text-gray-300"
+                        >Other</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between pt-6">
+              <button
+                type="reset"
+                class="px-6 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+              >
+                Reset
+              </button>
+              <button
+                type="submit"
+                class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+              >
+                Submit
+              </button>
+            </div>
+
+            <input type="hidden" name="username" value="435043951" />
+            <input
+              type="hidden"
+              name="to_email_address"
+              value="carlitosdiazplaza@gmail.com"
+            />
+            <input
+              type="hidden"
+              name="to_display_name"
+              value="Carlos Diaz Plaza"
+            />
+          </form>
+        </div>
+      </section>
+
+      <footer class="border-t border-gray-200 dark:border-gray-700 pt-6 mt-8">
+        <nav class="text-center">
+          <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">
+            Quick Links
+          </h3>
+          <div class="space-x-6">
+            <a
+              href="index.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Personal Web Page</a
+            >
+
+            <a
+              href="http://139.62.210.181/~dc201341/index.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >ePortfolio</a
+            >
+          </div>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const darkModeIcon = document.getElementById("darkModeIcon");
+      const html = document.documentElement;
+
+      const currentMode = localStorage.getItem("darkMode") || "light";
+
+      if (currentMode === "dark") {
+        html.classList.add("dark");
+        darkModeIcon.textContent = "☀️";
+      } else {
+        html.classList.remove("dark");
+        darkModeIcon.textContent = "🌙";
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+
+       
+        if (html.classList.contains("dark")) {
+          darkModeIcon.textContent = "☀️";
+          localStorage.setItem("darkMode", "dark");
+        } else {
+          darkModeIcon.textContent = "🌙";
+          localStorage.setItem("darkMode", "light");
+        }
+      });
+
+      
+      document.querySelector('form').addEventListener('submit', function(e) {
+       
+        const checkedLanguages = document.querySelectorAll('input[name="programmingLanguages[]"]:checked');
+        
+       
+        const selectedLanguages = Array.from(checkedLanguages).map(checkbox => checkbox.value);
+        
+        
+        checkedLanguages.forEach(checkbox => checkbox.disabled = true);
+        
+        
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.name = 'programmingLanguages';
+        hiddenInput.value = selectedLanguages.length > 0 ? selectedLanguages.join(', ') : 'None selected';
+        
+        
+        this.appendChild(hiddenInput);
+      });
+    </script>
+  </body>
+</html>

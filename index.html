@@ -3,14 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Welcome to My Webpage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="stylesheet" href="mySite.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="main.js" defer></script>
   </head>
-  <body>
-    <center>
-        <h1> Carlos Diaz Plaza </h1>
-        <p>Hello, World!</p>
-    </center>
+
+  <body
+    class="personal-page bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-300"
+  >
+    <div class="max-w-4xl mx-auto p-6">
+      <header class="text-center mb-8">
+        <div class="flex justify-end mb-4">
+          <button
+            id="darkModeToggle"
+            class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+          >
+            <span id="darkModeIcon">🌙</span>
+          </button>
+        </div>
+        <h1 class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
+          Carlos Diaz Plaza
+        </h1>
+        <img
+          src="/images/me.JPG"
+          alt="Carlos Diaz Plaza"
+          class="mx-auto rounded-full w-48 h-48 object-cover shadow-lg mb-6"
+        />
+      </header>
+
+      <section class="mb-8">
+        <h2
+          class="about-me-header text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+        >
+          About Me
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          Hello! I'm Carlos Diaz Plaza, a passionate individual with a love for
+          learning and technology. I enjoy making products for my small
+          business, love making discord bots, as well as making websites and
+          playing basketball. I'm currently exploring various fields and
+          continuously seeking new challenges to grow both personally and
+          professionally. I am puerto rican, and a Junior in UNF!
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          One interesting fact about me is that I'm fluent in multiple languages
+          and have traveled to over 6 countries. I believe that understanding
+          different cultures and perspectives is crucial in today's
+          interconnected world, and also it helps out with jobs so I love doing
+          it. Also, I love using
+          <a
+            href="https://en.wikipedia.org/wiki/Artificial_intelligence"
+            target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >artificial intelligence</a
+          >
+          to help me learn new languages. I have a great strength in web
+          development, but I love using it to learn more about new release of
+          new languages and trying to understand it more!
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2
+          class="hobbies-header text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+        >
+          Hobbies & Interests
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          In my free time, I'm passionate about basketball and my small
+          business. I particularly enjoy basketball due to the competitive
+          nature of the sport and the teamwork involved. It's a great way to
+          stay active and socialize with friends. Additionally, I have a keen
+          interest in
+          <a
+            href="https://en.wikipedia.org/wiki/Web_development"
+            target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >web development</a
+          >
+          and enjoy building interactive websites and applications. It's one of
+          the things that I offer for my small business, and I love seeing the
+          final product come to life.
+        </p>
+        <div class="flex gap-4 mb-4 justify-center">
+          <img
+            src="/images/pickup-logo.jpeg"
+            alt="Pickup basketball"
+            class="w-48 h-32 object-cover rounded shadow-md"
+          />
+          <img
+            src="/images/coding.jpeg"
+            alt="Coding hobby"
+            class="w-48 h-32 object-cover rounded shadow-md"
+          />
+        </div>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          I'm also an enthusiast of movies and music. I love seeing the drama,
+          the plots, the thrillers, and the comedies. Music is another passion
+          of mine; I enjoy a wide range of genres and often find myself
+          exploring new artists and styles. These interests provide a great
+          balance to my life and help me unwind after a busy day. Definitely
+          helps me with stress relief!
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2
+          class="education-header text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
+        >
+          Education
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          My educational journey has been focused on developing both technical
+          skills. I believe in the importance of continuous learning and staying
+          updated with the latest developments in technology and
+          <a
+            href="https://en.wikipedia.org/wiki/Computer_science"
+            target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >computer science</a
+          >. My goal is to finish my degree in Informational Science and my
+          Minor in Entrepeneurship to further my small business and help me with
+          my career.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          I have attended various competitions, workshops, my high school was a
+          very high tech and very path and career based school so I learned a
+          lot there, and online courses to enhance my knowledge and skills. For
+          example, my path in high school was Cybersecurity, where I learned web
+          development, networking, OS, and much more. I was able to get my
+          CompTIA A+ certification, and I am currently wanting to work towards
+          my Network+ certification. I was also fortnunate to be able to attend
+          various TSA or Technology Student Association competitions, where I
+          was able to compete in various events such as coding, web design.
+          These experiences have been invaluable in shaping my understanding of
+          the field and have provided me with practical skills that I can apply
+          in real-world scenarios.
+        </p>
+
+        <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">
+          Diplomas, Degrees, and Certificates:
+        </h3>
+        <ul
+          class="education-list list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+        >
+          <li class="high-school">
+            High School Diploma - NeoCity Academy (Graduated 2023)
+          </li>
+          <li class="college-degree">
+            Bachelor's Degree in Information Systems - University of North
+            Florida (In Progress)
+          </li>
+          <li class="certificate">CompTIA A+ Certification (Completed)</li>
+        </ul>
+      </section>
+
+      <footer class="border-t border-gray-200 dark:border-gray-700 pt-6 mt-8">
+        <nav class="text-center">
+          <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">
+            Quick Links
+          </h3>
+          <div class="space-x-6">
+            <a
+              href="schedule.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Class Schedule</a
+            >
+            <a
+              href="account.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Create Account</a
+            >
+            <a
+              href="http://139.62.210.181/~dc201341/index.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >ePortfolio</a
+            >
+          </div>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      // Dark mode toggle functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const darkModeIcon = document.getElementById("darkModeIcon");
+      const html = document.documentElement;
+
+      
+      const currentMode = localStorage.getItem("darkMode") || "light";
+
+      
+      if (currentMode === "dark") {
+        html.classList.add("dark");
+        darkModeIcon.textContent = "☀️";
+      } else {
+        html.classList.remove("dark");
+        darkModeIcon.textContent = "🌙";
+      }
+
+      
+      darkModeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+
+        
+        if (html.classList.contains("dark")) {
+          darkModeIcon.textContent = "☀️";
+          localStorage.setItem("darkMode", "dark");
+        } else {
+          darkModeIcon.textContent = "🌙";
+          localStorage.setItem("darkMode", "light");
+        }
+      });
+    </script>
   </body>
 </html>

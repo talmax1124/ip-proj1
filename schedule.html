@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Class Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="stylesheet" href="mySite.css" />
+  </head>
+  <body
+    class="schedule-page bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-300"
+  >
+    <div class="max-w-6xl mx-auto p-6">
+      <header class="text-center mb-8">
+        <div class="flex justify-end mb-4">
+          <button
+            id="darkModeToggle"
+            class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+          >
+            <span id="darkModeIcon">🌙</span>
+          </button>
+        </div>
+        <h1 class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
+          My Class Schedule
+        </h1>
+      </header>
+
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6"
+        >
+          My Fall 2025 Class Schedule
+        </h2>
+
+        <div class="overflow-x-auto">
+          <table
+            class="schedule-table w-full border-collapse border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-lg shadow-md"
+          >
+            <thead>
+              <tr class="bg-gray-100 dark:bg-gray-700">
+                <th
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-800 dark:text-gray-200"
+                >
+                  Course
+                </th>
+                <th
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-800 dark:text-gray-200"
+                >
+                  Name
+                </th>
+                <th
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-800 dark:text-gray-200"
+                >
+                  Days
+                </th>
+                <th
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-800 dark:text-gray-200"
+                >
+                  Time
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3"
+                >
+                  <a
+                    href="https://unfinishedbusiness.app/courses/index.php?id=cot3100"
+                    target="_blank"
+                    class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >COT3100</a
+                  >
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Computational Structures
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Monday and Wednesday
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  12:00pm to 1:15pm
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3"
+                >
+                  <a
+                    href="https://unfinishedbusiness.app/courses/index.php?id=cop3813"
+                    target="_blank"
+                    class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >COP3813</a
+                  >
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Internet Programming
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Monday and Wednesday
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  1:30pm to 2:45pm
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3"
+                >
+                  <a
+                    href="https://unfinishedbusiness.app/courses/index.php?id=man4294"
+                    target="_blank"
+                    class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >MAN4294</a
+                  >
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Creativity & Innovation
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Monday & Wednesday
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  3:00pm to 4:15pm
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3"
+                >
+                  <a
+                    href="https://unfinishedbusiness.app/courses/index.php?id=cda4010"
+                    target="_blank"
+                    class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >CDA4010</a
+                  >
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  User Interface Design
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  Tuesday and Thursday
+                </td>
+                <td
+                  class="border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300"
+                >
+                  1:40pm to 2:55pm
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2
+          class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6"
+        >
+          Important Events
+        </h2>
+
+        <ol class="events-list space-y-4 text-gray-700 dark:text-gray-300">
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            January
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                January 1 -
+                <a
+                  href="https://en.wikipedia.org/wiki/New_Year%27s_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >New Year's Day</a
+                >
+              </li>
+              <li>
+                January 20 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Martin Luther King Jr. Day</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            February
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                February 14 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Valentine%27s_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Valentine's Day</a
+                >
+              </li>
+              <li>
+                February 17 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Presidents%27_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Presidents' Day</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            March
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                March 17 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Saint Patrick's Day</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            April
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                April 20 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Easter"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Easter Sunday</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            May
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                May 11 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Mother%27s_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Mother's Day</a
+                >
+              </li>
+              <li>
+                May 26 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Memorial_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Memorial Day</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            June
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                June 15 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Father%27s_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Father's Day</a
+                >
+              </li>
+              <li>
+                June 19 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Juneteenth"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Juneteenth</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            July
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                July 4 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Independence_Day_(United_States)"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Independence Day</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            August
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>August 13 - UNF Transient Registration Begins</li>
+              <li>August 18 - UNF Fall Classes Begin</li>
+              <li>August 18-22 - UNF Add/Drop and Late Registration Period</li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            September
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>
+                September 1 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Labor_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Labor Day</a
+                >
+                (No Classes, UNF Closed) / Module 2 Due
+              </li>
+              <li>September 8 - Paper Approval / Module 3 Due</li>
+              <li>
+                September 12 - UNF Complete Withdrawal Deadline (25% Refund)
+              </li>
+              <li>September 14 - Module 3 Due</li>
+              <li>September 21 - Project 1 Due</li>
+              <li>September 22 - Project 2 / Module 4 Due</li>
+              <li>September 28 - Module 4 Due</li>
+              <li>September 29 - Module 5 Due</li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            October
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>October 3 - UNF Deadline to Apply to Graduate</li>
+              <li>October 5 - Paper Approval / Module 5 Due</li>
+              <li>October 6 - Paper Review Due</li>
+              <li>October 9 - UNF Midterm Grades Available</li>
+              <li>October 10 - UNF First Half Classes End</li>
+              <li>October 12 - Project 2 Due</li>
+              <li>
+                October 13 - UNF Second Half Classes Begin / Project 3 / Module
+                6 Due
+              </li>
+              <li>
+                October 13 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Columbus_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Columbus Day</a
+                >
+              </li>
+              <li>October 13-17 - UNF Add/Drop for Second Half Classes</li>
+              <li>October 19 - Module 6 Due</li>
+              <li>October 20 - Module 7 Due</li>
+              <li>October 26 - Project 3 / Module 7 Due</li>
+              <li>October 27 - Project 4 / Module 8 Due</li>
+              <li>
+                October 31 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Halloween"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Halloween</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            November
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>November 2 - Paper Review / Module 8 Due</li>
+              <li>November 3 - Module 9 Due</li>
+              <li>November 7 - Withdraw Deadline</li>
+              <li>November 9 - Module 9 Due</li>
+              <li>
+                November 10 - UNF Spring Registration Begins by Time Ticket /
+                Module 10 Due
+              </li>
+              <li>
+                November 11 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Veterans_Day"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Veterans Day</a
+                >
+              </li>
+              <li>November 16 - Module 10 Due</li>
+              <li>
+                November 17 - UNF Open Registration for Spring 2026 Begins
+              </li>
+              <li>November 23 - Project 4 Due / Thanksgiving</li>
+              <li>November 24-28 - UNF Thanksgiving Break (No Classes)</li>
+              <li>
+                November 27 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Thanksgiving"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Thanksgiving Day</a
+                >
+              </li>
+            </ol>
+          </li>
+
+          <li class="font-medium text-gray-800 dark:text-gray-200">
+            December
+            <ol class="mt-2 ml-6 space-y-1 font-normal">
+              <li>December 5 - UNF Fall Classes End (Full Term)</li>
+              <li>
+                December 25 -
+                <a
+                  href="https://en.wikipedia.org/wiki/Christmas"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline"
+                  >Christmas Day</a
+                >
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <footer class="border-t border-gray-200 dark:border-gray-700 pt-6 mt-8">
+        <nav class="text-center">
+          <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">
+            Quick Links
+          </h3>
+          <div class="space-x-6">
+            <a
+              href="index.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Personal Web Page</a
+            >
+            <a
+              href="http://139.62.210.181/~dc201341/index.html"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >ePortfolio</a
+            >
+          </div>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      // Dark mode toggle functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const darkModeIcon = document.getElementById("darkModeIcon");
+      const html = document.documentElement;
+
+      const currentMode = localStorage.getItem("darkMode") || "light";
+
+      if (currentMode === "dark") {
+        html.classList.add("dark");
+        darkModeIcon.textContent = "☀️";
+      } else {
+        html.classList.remove("dark");
+        darkModeIcon.textContent = "🌙";
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+
+        if (html.classList.contains("dark")) {
+          darkModeIcon.textContent = "☀️";
+          localStorage.setItem("darkMode", "dark");
+        } else {
+          darkModeIcon.textContent = "🌙";
+          localStorage.setItem("darkMode", "light");
+        }
+      });
+    </script>
+  </body>
+</html>
